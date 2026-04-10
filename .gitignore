@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+
+# Environment variables — NEVER commit these
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Upload script contains API credentials — keep off GitHub
+scripts/upload-to-cloudinary.mjs
+
+# Logs
+*.log
+npm-debug.log*

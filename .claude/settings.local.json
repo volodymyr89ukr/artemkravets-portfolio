@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"E:/21_Work_with_photos/01 Настя_1/Вау/IMG_5395.jpg\" \"E:/20_Website_Photo/public/images/hero.jpg\")",
+      "Bash(cp \"E:/21_Work_with_photos/01 Настя_1/Вау/IMG_5113.jpg\"  \"E:/20_Website_Photo/public/images/gallery/fashion-01.jpg\")",
+      "Bash(cp \"E:/21_Work_with_photos/01 Настя_1/Вау/IMG_5440.jpg\"  \"E:/20_Website_Photo/public/images/gallery/fashion-02.jpg\")",
+      "Bash(cp \"E:/21_Work_with_photos/01 Настя_1/Вау/IMG_5471.jpg\"  \"E:/20_Website_Photo/public/images/gallery/fashion-03.jpg\")",
+      "Bash(cp \"E:/21_Work_with_photos/01 Настя_1/Вау/IMG_5485.jpg\"  \"E:/20_Website_Photo/public/images/gallery/fashion-04.jpg\")",
+      "Bash(cp \"E:/21_Work_with_photos/02 Анна/Вау/IMG_2540.jpg\"       \"E:/20_Website_Photo/public/images/gallery/portrait-01.jpg\")",
+      "Bash(cp \"E:/21_Work_with_photos/02 Анна/Вау/IMG_2604.jpg\"       \"E:/20_Website_Photo/public/images/gallery/portrait-02.jpg\")",
+      "Bash(cp \"E:/21_Work_with_photos/02 Анна/Вау/IMG_2803.jpg\"       \"E:/20_Website_Photo/public/images/gallery/portrait-03.jpg\")",
+      "Bash(cp \"E:/21_Work_with_photos/02 Анна/Вау/IMG_2863.jpg\"       \"E:/20_Website_Photo/public/images/gallery/portrait-04.jpg\")",
+      "Bash(cp \"E:/21_Work_with_photos/14 Настя_2/ВАУ/IMG_0937.jpg\"   \"E:/20_Website_Photo/public/images/gallery/portrait-05.jpg\")",
+      "Bash(npm run:*)"
+    ]
+  }
+}
