@@ -185,7 +185,8 @@ export function PortfolioGrid() {
               key={item.id}
               type="button"
               onClick={() => openPhoto(index)}
-              className="group relative overflow-hidden rounded-2xl focus:outline-none"
+              className="group relative block overflow-hidden focus:outline-none"
+              style={{ border: '5px solid white', borderRadius: 0, WebkitAppearance: 'none' }}
             >
               <img
                 src={item.image}
@@ -194,11 +195,9 @@ export function PortfolioGrid() {
                 loading="lazy"
               />
               <div
-                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{ background: 'rgba(0,0,0,0.28)' }}
-              >
-                <SearchPlusIcon />
-              </div>
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                style={{ background: 'rgba(0,0,0,0.18)' }}
+              />
             </button>
           ))}
         </div>
@@ -228,15 +227,3 @@ function ChevronRight() {
   );
 }
 
-function SearchPlusIcon() {
-  return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
-      fill="none" stroke="white" strokeWidth="1.2"
-      strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="11" cy="11" r="8" />
-      <line x1="21" y1="21" x2="16.65" y2="16.65" />
-      <line x1="11" y1="8" x2="11" y2="14" />
-      <line x1="8" y1="11" x2="14" y2="11" />
-    </svg>
-  );
-}
