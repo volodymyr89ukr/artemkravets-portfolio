@@ -179,14 +179,14 @@ export function PortfolioGrid() {
           })}
         </div>
 
-        <div className="grid gap-4 grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 grid-cols-2 lg:grid-cols-3" style={{ background: '#080808' }}>
           {filteredItems.map((item, index) => (
             <button
               key={item.id}
               type="button"
               onClick={() => openPhoto(index)}
               className="group relative block overflow-hidden focus:outline-none"
-              style={{ border: 'none', borderRadius: 0, WebkitAppearance: 'none' }}
+              style={{ border: 'none', borderRadius: 0, WebkitAppearance: 'none', background: 'transparent' }}
             >
               <img
                 src={item.image}
