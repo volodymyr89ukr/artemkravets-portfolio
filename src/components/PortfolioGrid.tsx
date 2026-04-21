@@ -179,19 +179,20 @@ export function PortfolioGrid() {
           })}
         </div>
 
-        <div className="grid gap-4 grid-cols-2 lg:grid-cols-3" style={{ background: '#080808' }}>
+        <div className="grid gap-8 grid-cols-2 lg:grid-cols-3" style={{ background: '#080808' }}>
           {filteredItems.map((item, index) => (
             <button
               key={item.id}
               type="button"
               onClick={() => openPhoto(index)}
               className="group relative block overflow-hidden focus:outline-none"
-              style={{ border: 'none', borderRadius: 0, WebkitAppearance: 'none', background: 'transparent' }}
+              style={{ border: 'none', borderRadius: 0, WebkitAppearance: 'none', background: 'transparent', aspectRatio: '2/3' }}
             >
               <img
                 src={item.image}
                 alt={item.title}
-                className="w-full block transition duration-700 group-hover:scale-105"
+                className="w-full h-full transition duration-700 group-hover:scale-105"
+                style={{ objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
                 loading="lazy"
               />
               <div
