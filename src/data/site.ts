@@ -71,16 +71,12 @@ export const galleryItems = [
   { id: 7,  title: 'Late Light',     category: 'Fashion', image: cdn('olia-1/series/img_3922') },
   { id: 8,  title: 'Still Moment',   category: 'Fashion', image: cdn('olia-1/series/img_3976') },
   { id: 9,  title: 'Shadow Play',    category: 'Fashion', image: cdn('nastya-1/wow/img_5485') },
-  { id: 10, title: 'Rooftop',        category: 'Fashion', image: cdn('rooftop/wow/img_2233') },
   // Portrait
-  { id: 11, title: 'Window',         category: 'Portrait', image: cdn('diana/series/105') },
-  { id: 12, title: 'River Light',    category: 'Portrait', image: cdn('anna/series/img_2584') },
-  { id: 13, title: 'Bridge',         category: 'Portrait', image: cdn('anna/wow/img_2803') },
-  { id: 14, title: 'Deep Gaze',      category: 'Portrait', image: cdn('maria/series/img_9032') },
-  { id: 15, title: 'Quiet Hour',     category: 'Portrait', image: cdn('maria/series/img_9690') },
-  { id: 16, title: 'Staircase I',    category: 'Portrait', image: cdn('staircase/wow/img_0264') },
-  { id: 17, title: 'Staircase II',   category: 'Portrait', image: cdn('staircase/wow/img_0309') },
+  { id: 10, title: 'Window',         category: 'Portrait', image: cdn('diana/series/105') },
+  { id: 11, title: 'River Light',    category: 'Portrait', image: cdn('anna/series/img_2584') },
+  { id: 12, title: 'Bridge',         category: 'Portrait', image: cdn('anna/wow/img_2803') },
+  { id: 13, title: 'Deep Gaze',      category: 'Portrait', image: cdn('maria/series/img_9032') },
+  { id: 14, title: 'Quiet Hour',     category: 'Portrait', image: cdn('maria/series/img_9690') },
   // Studio
-  { id: 18, title: 'Red Study',      category: 'Studio',   image: cdn('lena-2/wow/img_2401') },
-  { id: 19, title: 'Veil',           category: 'Studio',   image: cdn('ballet/wow/img_0839') },
+  { id: 15, title: 'Red Study',      category: 'Studio',   image: cdn('lena-2/wow/img_2401') },
 ];
