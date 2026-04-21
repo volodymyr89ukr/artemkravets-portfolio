@@ -82,4 +82,5 @@ export const galleryItems = [
   { id: 17, title: 'Staircase II',   category: 'Portrait', image: cdn('staircase/wow/img_0309') },
   // Studio
   { id: 18, title: 'Red Study',      category: 'Studio',   image: cdn('lena-2/wow/img_2401') },
+  { id: 19, title: 'Veil',           category: 'Studio',   image: cdn('ballet/wow/img_0839') },
 ];
