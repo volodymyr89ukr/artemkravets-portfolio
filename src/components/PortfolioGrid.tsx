@@ -186,7 +186,7 @@ export function PortfolioGrid() {
               type="button"
               onClick={() => openPhoto(index)}
               className="group relative block overflow-hidden focus:outline-none"
-              style={{ border: '5px solid white', borderRadius: 0, WebkitAppearance: 'none' }}
+              style={{ border: 'none', borderRadius: 0, WebkitAppearance: 'none' }}
             >
               <img
                 src={item.image}
