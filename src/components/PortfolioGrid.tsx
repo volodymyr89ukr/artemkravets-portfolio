@@ -6,6 +6,10 @@ import { galleryItems } from '@/data/site';
 
 const categories = ['All', 'Fashion', 'Portrait', 'Studio'];
 
+// Smart-crop on Cloudinary side so slightly off-ratio sources don't rely on blind CSS center-crop.
+const thumb = (url: string, ar: '2:3' | '3:2') =>
+  url.replace('/upload/f_auto,q_auto/', `/upload/c_fill,ar_${ar},g_auto,f_auto,q_auto/`);
+
 export function PortfolioGrid() {
   const [activeCategory, setActiveCategory] = useState('All');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -194,7 +198,7 @@ export function PortfolioGrid() {
                 style={{ border: 'none', borderRadius: 0, WebkitAppearance: 'none', background: 'transparent', aspectRatio: '2/3' }}
               >
                 <img
-                  src={item.image}
+                  src={thumb(item.image, '2:3')}
                   alt={item.title}
                   className="w-full h-full transition duration-700 group-hover:scale-105"
                   style={{ objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
@@ -224,7 +228,7 @@ export function PortfolioGrid() {
                   style={{ border: 'none', borderRadius: 0, WebkitAppearance: 'none', background: 'transparent', aspectRatio: '3/2' }}
                 >
                   <img
-                    src={item.image}
+                    src={thumb(item.image, '3:2')}
                     alt={item.title}
                     className="w-full h-full transition duration-700 group-hover:scale-105"
                     style={{ objectFit: 'cover', objectPosition: 'center', display: 'block' }}
