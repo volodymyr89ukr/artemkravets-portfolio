@@ -63,7 +63,7 @@ export const testimonials = [
 export const galleryItems = [
   // Fashion
   { id: 1,  title: 'Morning Light',  category: 'Fashion', image: cdn('yulia/series/img_0187') },
-  { id: 2,  title: 'Soft Walk',      category: 'Fashion', image: cdn('yulia/series/img_1387') },
+  { id: 2,  title: 'Soft Walk',      category: 'Fashion', orientation: 'landscape' as const, image: cdn('yulia/series/img_1387') },
   { id: 3,  title: 'City Frame',     category: 'Fashion', image: cdn('lena-1/series/img_3321') },
   { id: 4,  title: 'Autumn Street',  category: 'Fashion', image: cdn('lena-1/series/img_3455') },
   { id: 5,  title: 'Forest Mood',    category: 'Fashion', image: cdn('bogdana/series/img_3502') },
@@ -73,7 +73,7 @@ export const galleryItems = [
   { id: 9,  title: 'Shadow Play',    category: 'Fashion', image: cdn('nastya-1/wow/img_5485') },
   { id: 10, title: 'Rooftop',        category: 'Fashion', image: cdn('rooftop/wow/img_2233') },
   // Portrait
-  { id: 11, title: 'Window',         category: 'Portrait', image: cdn('diana/series/105') },
+  { id: 11, title: 'Window',         category: 'Portrait', orientation: 'landscape' as const, image: cdn('diana/series/105') },
   { id: 12, title: 'River Light',    category: 'Portrait', image: cdn('anna/series/img_2584') },
   { id: 13, title: 'Bridge',         category: 'Portrait', image: cdn('anna/wow/img_2803') },
   { id: 14, title: 'Deep Gaze',      category: 'Portrait', image: cdn('maria/series/img_9032') },

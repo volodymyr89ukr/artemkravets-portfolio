@@ -13,10 +13,14 @@ export function PortfolioGrid() {
 
   useEffect(() => { setMounted(true); }, []);
 
-  const filteredItems =
+  const matchingItems =
     activeCategory === 'All'
       ? galleryItems
       : galleryItems.filter((item) => item.category === activeCategory);
+
+  const portraitItems = matchingItems.filter((i) => i.orientation !== 'landscape');
+  const landscapeItems = matchingItems.filter((i) => i.orientation === 'landscape');
+  const filteredItems = [...portraitItems, ...landscapeItems];
 
   const isOpen = activeIndex !== null;
   const activeImage = isOpen ? filteredItems[activeIndex]?.image ?? null : null;
@@ -179,29 +183,62 @@ export function PortfolioGrid() {
           })}
         </div>
 
-        <div className="grid gap-8 grid-cols-2 lg:grid-cols-3" style={{ background: '#080808' }}>
-          {filteredItems.map((item, index) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => openPhoto(index)}
-              className="group relative block overflow-hidden focus:outline-none"
-              style={{ border: 'none', borderRadius: 0, WebkitAppearance: 'none', background: 'transparent', aspectRatio: '2/3' }}
-            >
-              <img
-                src={item.image}
-                alt={item.title}
-                className="w-full h-full transition duration-700 group-hover:scale-105"
-                style={{ objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
-                loading="lazy"
-              />
-              <div
-                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{ background: 'rgba(0,0,0,0.18)' }}
-              />
-            </button>
-          ))}
-        </div>
+        {portraitItems.length > 0 && (
+          <div className="grid gap-8 grid-cols-2 lg:grid-cols-3" style={{ background: '#080808' }}>
+            {portraitItems.map((item, index) => (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => openPhoto(index)}
+                className="group relative block overflow-hidden focus:outline-none"
+                style={{ border: 'none', borderRadius: 0, WebkitAppearance: 'none', background: 'transparent', aspectRatio: '2/3' }}
+              >
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-full h-full transition duration-700 group-hover:scale-105"
+                  style={{ objectFit: 'cover', objectPosition: 'center top', display: 'block' }}
+                  loading="lazy"
+                />
+                <div
+                  className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                  style={{ background: 'rgba(0,0,0,0.18)' }}
+                />
+              </button>
+            ))}
+          </div>
+        )}
+
+        {landscapeItems.length > 0 && (
+          <>
+            <p className="mt-16 mb-6 text-xs uppercase tracking-[0.4em]" style={{ color: 'var(--accent)' }}>
+              Wide Format
+            </p>
+            <div className="grid gap-8 grid-cols-1 lg:grid-cols-2" style={{ background: '#080808' }}>
+              {landscapeItems.map((item, index) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => openPhoto(portraitItems.length + index)}
+                  className="group relative block overflow-hidden focus:outline-none"
+                  style={{ border: 'none', borderRadius: 0, WebkitAppearance: 'none', background: 'transparent', aspectRatio: '3/2' }}
+                >
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full transition duration-700 group-hover:scale-105"
+                    style={{ objectFit: 'cover', objectPosition: 'center', display: 'block' }}
+                    loading="lazy"
+                  />
+                  <div
+                    className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                    style={{ background: 'rgba(0,0,0,0.18)' }}
+                  />
+                </button>
+              ))}
+            </div>
+          </>
+        )}
 
       </section>
 
