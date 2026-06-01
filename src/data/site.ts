@@ -8,8 +8,9 @@ export const siteConfig = {
     'Vienna-based photographer specializing in fashion and portrait photography. Elegant, editorial, and deeply personal imagery.',
   url: 'https://your-domain.vercel.app',
   location: 'Vienna, Austria',
-  email: 'hello@example.com',
+  email: 'artemkravetsofficialph@gmail.com',
   instagram: 'https://www.instagram.com/artemkravetsofficial',
+  whatsapp: '+4396010174950',
   formspreeId: 'YOUR_FORMSPREE_FORM_ID',
   cloudName: 'dzxyuuimk',
   heroImage: cdn('hero/hero-2')
@@ -49,6 +50,16 @@ export const services = [
   }
 ];
 
+export const brandServices = [
+  'Fine Art Photography',
+  'Fashion Campaigns',
+  'Brand Campaigns',
+  'Lookbooks',
+  'Clothing Collection Presentations',
+  'Editorial Photography',
+  'Model Tests'
+];
+
 export const galleryItems = [
   // Fashion
   { id: 1,  title: 'Morning Light',  category: 'Fashion', image: cdn('yulia/series/img_0187') },
@@ -61,6 +72,7 @@ export const galleryItems = [
   { id: 8,  title: 'Still Moment',   category: 'Fashion', image: cdn('olia-1/series/img_3976') },
   { id: 9,  title: 'Shadow Play',    category: 'Fashion', image: cdn('nastya-1/wow/img_5485') },
   { id: 10, title: 'Rooftop',        category: 'Fashion', image: cdn('rooftop/wow/img_2233') },
+  { id: 20, title: 'Poise',          category: 'Fashion', image: cdn('hero/hero-1') },
   // Portrait
   { id: 11, title: 'Window',         category: 'Portrait', orientation: 'landscape' as const, image: cdn('diana/series/105') },
   { id: 12, title: 'River Light',    category: 'Portrait', image: cdn('anna/series/img_2584') },

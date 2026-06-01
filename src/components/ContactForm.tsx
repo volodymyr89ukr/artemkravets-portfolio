@@ -48,10 +48,6 @@ export function ContactForm() {
           <h2 className="text-4xl md:text-5xl mb-8" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
             Book a Session
           </h2>
-          <p className="text-sm leading-8 mb-10" style={{ color: 'var(--muted)' }}>
-            Based in Vienna, available for sessions across the city
-            and surrounding area. Also open to travel for editorial and commercial projects.
-          </p>
           <div className="space-y-4 text-xs uppercase tracking-[0.25em]" style={{ color: 'var(--muted)' }}>
             <div>
               <span style={{ color: 'var(--accent)' }}>Email</span>
@@ -70,6 +66,18 @@ export function ContactForm() {
                 className="mt-1 block hover:text-white transition"
               >
                 @artemkravetsofficial ↗
+              </a>
+            </div>
+            <div>
+              <span style={{ color: 'var(--accent)' }}>WhatsApp</span>
+              <br />
+              <a
+                href={`https://wa.me/${siteConfig.whatsapp.replace(/[^0-9]/g, '')}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 block hover:text-white transition"
+              >
+                {siteConfig.whatsapp} ↗
               </a>
             </div>
           </div>
@@ -103,7 +111,7 @@ export function ContactForm() {
             <select name="sessionType" className={inputClass} style={inputStyle} defaultValue="Personal Studio Shooting">
               <option>Personal Studio Shooting</option>
               <option>Personal Outdoor Shooting</option>
-              <option>Other</option>
+              <option>For Brands</option>
             </select>
           </label>
 

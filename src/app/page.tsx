@@ -1,6 +1,7 @@
 import { About } from '@/components/About';
 import { ContactForm } from '@/components/ContactForm';
 import { Footer } from '@/components/Footer';
+import { ForBrands } from '@/components/ForBrands';
 import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { PortfolioGrid } from '@/components/PortfolioGrid';
@@ -15,6 +16,7 @@ export default function HomePage() {
         <About />
         <PortfolioGrid />
         <Services />
+        <ForBrands />
         <ContactForm />
       </main>
       <Footer />
