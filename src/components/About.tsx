@@ -1,33 +1,19 @@
-import { siteConfig, testimonials } from '@/data/site';
+import { siteConfig } from '@/data/site';
 
 export function About() {
   return (
     <section id="about" className="container-shell py-20 md:py-28">
-      <div className="grid gap-12 lg:grid-cols-[1fr_1fr] lg:gap-16 items-start">
+      <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16 items-start">
 
-        {/* About text */}
+        {/* Heading */}
         <div>
           <p className="mb-3 text-xs uppercase tracking-[0.4em]" style={{ color: 'var(--accent)' }}>
             About
           </p>
-          <h2 className="text-4xl md:text-5xl mb-8" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
-            Artem Kravets
+          <h2 className="text-4xl md:text-5xl" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
+            About Me
           </h2>
-          <div className="space-y-5 text-sm leading-8" style={{ color: 'var(--muted)' }}>
-            <p>
-              Based in Vienna, I work at the intersection of fashion and portrait photography —
-              creating images that are editorial in feel, yet deeply personal in nature.
-            </p>
-            <p>
-              Every session is a collaboration. I work closely with each person to build
-              an atmosphere where they can be themselves — and the camera follows.
-            </p>
-            <p>
-              Vienna's architecture, parks, and light are an endless source of inspiration.
-              I shoot both on location across the city and in studio.
-            </p>
-          </div>
-          <div className="mt-10 flex gap-6">
+          <div className="mt-8 flex gap-6">
             <a
               href={siteConfig.instagram}
               target="_blank"
@@ -47,25 +33,22 @@ export function About() {
           </div>
         </div>
 
-        {/* Testimonials */}
-        <div className="space-y-5">
-          {testimonials.map((testimonial) => (
-            <blockquote
-              key={testimonial.name}
-              className="rounded-2xl p-8"
-              style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
-            >
-              <p
-                className="text-lg leading-9 italic"
-                style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}
-              >
-                "{testimonial.text}"
-              </p>
-              <footer className="mt-6 text-xs uppercase tracking-[0.3em]" style={{ color: 'var(--accent)' }}>
-                — {testimonial.name}
-              </footer>
-            </blockquote>
-          ))}
+        {/* Bio */}
+        <div className="space-y-5 text-sm leading-8" style={{ color: 'var(--muted)' }}>
+          <p>
+            My work has been published in magazines such as Sainteight Magazine, Malvie Magazine,
+            Goji Magazine, and 17.23 Magazine. A solo exhibition in Ukraine has featured my work in a
+            street photography style. Invitations to photograph Ukrainian Fashion Week followed in
+            2023 and 2024. Collaboration with European and Ukrainian models, including brands, is an
+            ongoing part of my practice. My work has also been included in the Top 10 of the 35AWARDS
+            competition (6th and 7th).
+          </p>
+          <p>
+            Both digital and film photography are part of my workflow, with a continuous focus on
+            professional development and refinement of craft. A classic approach to photography
+            remains a core direction of my style. The greatest sources of inspiration are
+            photographers of the 1950s–1970s, as well as old black-and-white films.
+          </p>
         </div>
 
       </div>

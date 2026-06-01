@@ -5,6 +5,7 @@ import { Header } from '@/components/Header';
 import { Hero } from '@/components/Hero';
 import { PortfolioGrid } from '@/components/PortfolioGrid';
 import { Services } from '@/components/Services';
+import { Testimonials } from '@/components/Testimonials';
 
 export default function HomePage() {
   return (
@@ -12,9 +13,10 @@ export default function HomePage() {
       <Header />
       <main>
         <Hero />
+        <About />
         <PortfolioGrid />
         <Services />
-        <About />
+        <Testimonials />
         <ContactForm />
       </main>
       <Footer />

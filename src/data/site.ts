@@ -12,13 +12,13 @@ export const siteConfig = {
   instagram: 'https://www.instagram.com/artemkravetsofficial',
   formspreeId: 'YOUR_FORMSPREE_FORM_ID',
   cloudName: 'dzxyuuimk',
-  heroImage: cdn('nastya-1/wow/img_5395')
+  heroImage: cdn('hero/hero-2')
 };
 
 export const navLinks = [
+  { href: '#about', label: 'About' },
   { href: '#portfolio', label: 'Portfolio' },
   { href: '#services', label: 'Services' },
-  { href: '#about', label: 'About' },
   { href: '#contact', label: 'Contact' }
 ];
 

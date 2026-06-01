@@ -5,6 +5,9 @@ node_modules/
 .next/
 out/
 
+# Claude Code worktrees
+.claude/worktrees/
+
 # Environment variables — NEVER commit these
 .env
 .env.local
@@ -14,8 +17,9 @@ out/
 .DS_Store
 Thumbs.db
 
-# Upload script contains API credentials — keep off GitHub
+# Upload scripts contain API credentials — keep off GitHub
 scripts/upload-to-cloudinary.mjs
+scripts/upload-hero.mjs
 
 # Logs
 *.log

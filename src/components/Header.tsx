@@ -23,7 +23,7 @@ export function Header() {
           className="rounded-full border px-5 py-2 text-xs uppercase tracking-[0.2em] transition hover:bg-white hover:text-black"
           style={{ borderColor: 'var(--border)', color: 'var(--muted)' }}
         >
-          Book
+          For Brands
         </a>
       </div>
     </header>
