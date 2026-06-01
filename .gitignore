@@ -17,9 +17,10 @@ out/
 .DS_Store
 Thumbs.db
 
-# Upload scripts contain API credentials — keep off GitHub
+# Scripts with Cloudinary API credentials — keep off GitHub
 scripts/upload-to-cloudinary.mjs
 scripts/upload-hero.mjs
+scripts/classify-tone.mjs
 
 # Logs
 *.log

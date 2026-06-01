@@ -4,23 +4,23 @@ import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { galleryItems } from '@/data/site';
 
-const categories = ['All', 'Fashion', 'Portrait', 'Studio'];
+const filters = [
+  { value: 'bw', label: 'Black & White' },
+  { value: 'color', label: 'Color' },
+] as const;
 
 // Smart-crop on Cloudinary side so slightly off-ratio sources don't rely on blind CSS center-crop.
 const thumb = (url: string, ar: '2:3' | '3:2') =>
   url.replace('/upload/f_auto,q_auto/', `/upload/c_fill,ar_${ar},g_auto,f_auto,q_auto/`);
 
 export function PortfolioGrid() {
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeTone, setActiveTone] = useState<'bw' | 'color'>('bw');
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => { setMounted(true); }, []);
 
-  const matchingItems =
-    activeCategory === 'All'
-      ? galleryItems
-      : galleryItems.filter((item) => item.category === activeCategory);
+  const matchingItems = galleryItems.filter((item) => item.tone === activeTone);
 
   const portraitItems = matchingItems.filter((i) => i.orientation !== 'landscape');
   const landscapeItems = matchingItems.filter((i) => i.orientation === 'landscape');
@@ -164,13 +164,13 @@ export function PortfolioGrid() {
         </div>
 
         <div className="mb-10 flex flex-wrap gap-2">
-          {categories.map((category) => {
-            const isActive = category === activeCategory;
+          {filters.map((filter) => {
+            const isActive = filter.value === activeTone;
             return (
               <button
-                key={category}
+                key={filter.value}
                 type="button"
-                onClick={() => setActiveCategory(category)}
+                onClick={() => { setActiveTone(filter.value); setActiveIndex(null); }}
                 className="rounded-full px-5 py-2 text-xs uppercase tracking-[0.25em] transition-all"
                 style={
                   isActive
@@ -178,7 +178,7 @@ export function PortfolioGrid() {
                     : { border: '1px solid var(--border)', color: 'var(--muted)' }
                 }
               >
-                {category}
+                {filter.label}
               </button>
             );
           })}
@@ -262,4 +262,3 @@ function ChevronRight() {
     </svg>
   );
 }
-
