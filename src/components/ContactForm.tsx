@@ -45,9 +45,6 @@ export function ContactForm() {
 
         {/* Left */}
         <div>
-          <p className="mb-3 text-xs uppercase tracking-[0.4em]" style={{ color: 'var(--accent)' }}>
-            Contact
-          </p>
           <h2 className="text-4xl md:text-5xl mb-8" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
             Book a Session
           </h2>
@@ -103,10 +100,9 @@ export function ContactForm() {
             <span className="mb-2 block text-xs uppercase tracking-[0.2em]" style={{ color: 'var(--muted)' }}>
               Session type
             </span>
-            <select name="sessionType" className={inputClass} style={inputStyle} defaultValue="Fashion Session">
-              <option>Fashion Session</option>
-              <option>Portrait Session</option>
-              <option>Creative Editorial</option>
+            <select name="sessionType" className={inputClass} style={inputStyle} defaultValue="Personal Studio Shooting">
+              <option>Personal Studio Shooting</option>
+              <option>Personal Outdoor Shooting</option>
               <option>Other</option>
             </select>
           </label>

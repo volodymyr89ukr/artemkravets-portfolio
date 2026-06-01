@@ -158,9 +158,6 @@ export function PortfolioGrid() {
       <section id="portfolio" className="container-shell py-20 md:py-28">
 
         <div className="mb-12">
-          <p className="mb-3 text-xs uppercase tracking-[0.4em]" style={{ color: 'var(--accent)' }}>
-            Portfolio
-          </p>
           <h2 className="text-4xl md:text-5xl" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
             Selected Work
           </h2>
@@ -215,10 +212,7 @@ export function PortfolioGrid() {
 
         {landscapeItems.length > 0 && (
           <>
-            <p className="mt-16 mb-6 text-xs uppercase tracking-[0.4em]" style={{ color: 'var(--accent)' }}>
-              Wide Format
-            </p>
-            <div className="grid gap-8 grid-cols-1 lg:grid-cols-2" style={{ background: '#080808' }}>
+            <div className="mt-8 grid gap-8 grid-cols-1 lg:grid-cols-2" style={{ background: '#080808' }}>
               {landscapeItems.map((item, index) => (
                 <button
                   key={item.id}

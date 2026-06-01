@@ -30,33 +30,22 @@ export const stats = [
 
 export const services = [
   {
-    title: 'Fashion Session',
-    description:
-      'Editorial-style shoots on location across Vienna — architecture, parks, streets. Crafted for portfolios, agencies, and personal branding.',
-    features: ['2–3 hour session', 'Location scouting included', 'Edited online gallery']
+    title: 'Personal Studio Shooting',
+    duration: '1 hour',
+    price: '350 €',
+    priceNote: '+ studio rent',
+    photos: '15 edited photos selected by me (each additional edited photo — 20 €)',
+    creativeDirection:
+      'Concept development, styling, location, wardrobe selection, shoot coordination, and atmosphere — all thoughtfully arranged and managed by me.'
   },
   {
-    title: 'Portrait Session',
-    description:
-      'Intimate, cinematic portraits with natural or studio light. Relaxed atmosphere, honest results.',
-    features: ['1–2 hour session', 'Studio or outdoor', 'Personal gallery delivery']
-  },
-  {
-    title: 'Creative Editorial',
-    description:
-      'Concept-driven collaborations for brands, magazines, and creative projects. Studio or location.',
-    features: ['Brief & mood board call', 'Styling direction', 'Commercial licence available']
-  }
-];
-
-export const testimonials = [
-  {
-    name: 'Anna M.',
-    text: 'The photos exceeded every expectation. Artem has a rare ability to make you feel completely at ease — and the results speak for themselves.'
-  },
-  {
-    name: 'Olya K.',
-    text: 'An exceptional eye for light and composition. Every frame feels like a still from a film. Highly recommend.'
+    title: 'Personal Outdoor Shooting',
+    duration: '1 hour',
+    price: '350 €',
+    priceNote: "+ photographer's travel expenses",
+    photos: '15 edited photos (each additional edited photo — 20 €)',
+    creativeDirection:
+      'Concept development, styling, location, wardrobe selection, shoot coordination, and atmosphere — all thoughtfully arranged and managed by me.'
   }
 ];
 

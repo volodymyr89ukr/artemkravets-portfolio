@@ -32,21 +32,6 @@ export function Hero() {
               Book a Session
             </a>
           </div>
-          <div className="mt-14 flex items-center gap-3">
-            <a
-              href={siteConfig.instagram}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs uppercase tracking-[0.3em] transition hover:opacity-60"
-              style={{ color: 'var(--muted)' }}
-            >
-              Instagram
-            </a>
-            <span style={{ color: 'var(--border)' }}>·</span>
-            <span className="text-xs uppercase tracking-[0.3em]" style={{ color: 'var(--muted)' }}>
-              Vienna, Austria
-            </span>
-          </div>
         </div>
 
         {/* Photo side */}

@@ -7,9 +7,6 @@ export function About() {
 
         {/* Heading */}
         <div>
-          <p className="mb-3 text-xs uppercase tracking-[0.4em]" style={{ color: 'var(--accent)' }}>
-            About
-          </p>
           <h2 className="text-4xl md:text-5xl" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
             About Me
           </h2>
