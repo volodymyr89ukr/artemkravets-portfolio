@@ -7,7 +7,7 @@ export function About() {
 
         {/* Heading */}
         <div>
-          <h2 className="text-4xl md:text-5xl" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
+          <h2 className="text-4xl md:text-5xl">
             About Me
           </h2>
           <div className="mt-8 flex gap-6">
@@ -15,14 +15,14 @@ export function About() {
               href={siteConfig.instagram}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-xs uppercase tracking-[0.3em] transition hover:opacity-60"
+              className="text-xs uppercase tracking-[0.25em] transition hover:opacity-60"
               style={{ color: 'var(--accent)' }}
             >
               Instagram ↗
             </a>
             <a
               href="#contact"
-              className="text-xs uppercase tracking-[0.3em] transition hover:opacity-60"
+              className="text-xs uppercase tracking-[0.25em] transition hover:opacity-60"
               style={{ color: 'var(--muted)' }}
             >
               Get in touch

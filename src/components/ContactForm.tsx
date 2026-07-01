@@ -45,7 +45,7 @@ export function ContactForm() {
 
         {/* Left */}
         <div>
-          <h2 className="text-4xl md:text-5xl mb-8" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
+          <h2 className="text-4xl md:text-5xl mb-8">
             Book a Session
           </h2>
           <div className="space-y-4 text-xs uppercase tracking-[0.25em]" style={{ color: 'var(--muted)' }}>
@@ -91,13 +91,13 @@ export function ContactForm() {
         >
           <div className="grid gap-4 md:grid-cols-2">
             <label className="block">
-              <span className="mb-2 block text-xs uppercase tracking-[0.2em]" style={{ color: 'var(--muted)' }}>
+              <span className="mb-2 block text-xs uppercase tracking-[0.25em]" style={{ color: 'var(--muted)' }}>
                 Name
               </span>
               <input type="text" name="name" required className={inputClass} style={inputStyle} />
             </label>
             <label className="block">
-              <span className="mb-2 block text-xs uppercase tracking-[0.2em]" style={{ color: 'var(--muted)' }}>
+              <span className="mb-2 block text-xs uppercase tracking-[0.25em]" style={{ color: 'var(--muted)' }}>
                 Email
               </span>
               <input type="email" name="email" required className={inputClass} style={inputStyle} />
@@ -105,7 +105,7 @@ export function ContactForm() {
           </div>
 
           <label className="mt-4 block">
-            <span className="mb-2 block text-xs uppercase tracking-[0.2em]" style={{ color: 'var(--muted)' }}>
+            <span className="mb-2 block text-xs uppercase tracking-[0.25em]" style={{ color: 'var(--muted)' }}>
               Session type
             </span>
             <select name="sessionType" className={inputClass} style={inputStyle} defaultValue="Personal Studio Shooting">
@@ -116,7 +116,7 @@ export function ContactForm() {
           </label>
 
           <label className="mt-4 block">
-            <span className="mb-2 block text-xs uppercase tracking-[0.2em]" style={{ color: 'var(--muted)' }}>
+            <span className="mb-2 block text-xs uppercase tracking-[0.25em]" style={{ color: 'var(--muted)' }}>
               Message
             </span>
             <textarea
@@ -131,14 +131,14 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={submitState === 'submitting'}
-            className="mt-6 rounded-full px-8 py-3.5 text-xs uppercase tracking-[0.25em] font-medium transition hover:opacity-80 disabled:opacity-40"
+            className="mt-6 rounded-full px-8 py-3.5 text-xs uppercase tracking-[0.2em] font-medium transition hover:opacity-80 disabled:opacity-40"
             style={{ background: 'var(--accent)', color: '#000' }}
           >
             {submitState === 'submitting' ? 'Sending…' : 'Send Inquiry'}
           </button>
 
           {submitState === 'success' ? (
-            <p className="mt-5 text-xs uppercase tracking-[0.2em]" style={{ color: 'var(--accent)' }}>
+            <p className="mt-5 text-xs uppercase tracking-[0.25em]" style={{ color: 'var(--accent)' }}>
               Thank you — I'll be in touch soon.
             </p>
           ) : null}

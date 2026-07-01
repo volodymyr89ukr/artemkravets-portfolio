@@ -7,10 +7,7 @@ export function Hero() {
 
         {/* Text side */}
         <div className="flex flex-col justify-center order-2 lg:order-1 py-8 lg:py-24">
-          <h1
-            className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl leading-[1.05] whitespace-nowrap"
-            style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}
-          >
+          <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl leading-[1.05] whitespace-nowrap">
             Artem Kravets
           </h1>
           <p className="mt-6 max-w-md text-base leading-8" style={{ color: 'var(--foreground)' }}>
@@ -19,14 +16,14 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap gap-4">
             <a
               href="#portfolio"
-              className="rounded-full border px-7 py-3 text-sm font-medium tracking-widest uppercase transition hover:bg-white hover:text-black"
+              className="rounded-full border px-7 py-3 text-sm font-medium tracking-[0.2em] uppercase transition hover:bg-white hover:text-black"
               style={{ borderColor: 'var(--border)' }}
             >
               View Work
             </a>
             <a
               href="#contact"
-              className="rounded-full px-7 py-3 text-sm font-medium tracking-widest uppercase transition-opacity hover:opacity-80"
+              className="rounded-full px-7 py-3 text-sm font-medium tracking-[0.2em] uppercase transition-opacity hover:opacity-80"
               style={{ background: 'var(--accent)', color: '#000' }}
             >
               Book a Session

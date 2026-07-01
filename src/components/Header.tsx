@@ -6,8 +6,7 @@ export function Header() {
       <div className="container-shell flex items-center justify-between py-5">
         <a
           href="#top"
-          className="text-sm font-medium tracking-[0.3em] uppercase"
-          style={{ fontFamily: 'var(--font-playfair), Georgia, serif', letterSpacing: '0.25em' }}
+          className="font-display text-sm font-medium tracking-[0.25em] uppercase"
         >
           Artem Kravets
         </a>

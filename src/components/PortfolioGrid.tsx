@@ -158,7 +158,7 @@ export function PortfolioGrid() {
       <section id="portfolio" className="container-shell py-20 md:py-28">
 
         <div className="mb-12">
-          <h2 className="text-4xl md:text-5xl" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
+          <h2 className="text-4xl md:text-5xl">
             Selected Work
           </h2>
         </div>
@@ -171,7 +171,7 @@ export function PortfolioGrid() {
                 key={filter.value}
                 type="button"
                 onClick={() => { setActiveTone(filter.value); setActiveIndex(null); }}
-                className="rounded-full px-5 py-2 text-xs uppercase tracking-[0.25em] transition-all"
+                className="rounded-full px-5 py-2 text-xs uppercase tracking-[0.2em] transition-all"
                 style={
                   isActive
                     ? { background: 'var(--accent)', color: '#000' }

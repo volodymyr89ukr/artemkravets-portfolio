@@ -3,7 +3,7 @@ import { brandServices } from '@/data/site';
 export function ForBrands() {
   return (
     <section id="for-brands" className="container-shell py-20 md:py-28">
-      <h2 className="text-4xl md:text-5xl mb-8" style={{ fontFamily: 'var(--font-playfair), Georgia, serif' }}>
+      <h2 className="text-4xl md:text-5xl mb-8">
         For Brands
       </h2>
 
@@ -35,7 +35,7 @@ export function ForBrands() {
       </p>
       <a
         href="#contact"
-        className="mt-8 inline-block rounded-full px-7 py-3 text-sm font-medium tracking-widest uppercase transition-opacity hover:opacity-80"
+        className="mt-8 inline-block rounded-full px-7 py-3 text-sm font-medium tracking-[0.2em] uppercase transition-opacity hover:opacity-80"
         style={{ background: 'var(--accent)', color: '#000' }}
       >
         Get in touch
