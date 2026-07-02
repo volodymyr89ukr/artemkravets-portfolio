@@ -49,6 +49,12 @@ img {
   height: auto;
 }
 
+/* Dropdown options — force a dark popup so the white option text stays readable */
+select option {
+  background-color: #1a1a1a;
+  color: var(--foreground);
+}
+
 .container-shell {
   width: min(1200px, calc(100% - 2.5rem));
   margin: 0 auto;
