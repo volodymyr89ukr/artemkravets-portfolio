@@ -16,15 +16,19 @@ export function ContactForm() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
+    formData.append('access_key', siteConfig.web3formsKey);
+    formData.append('subject', 'New inquiry from artemkravets.com');
+    formData.append('from_name', 'artemkravets.com');
 
     try {
-      const response = await fetch(`https://formspree.io/f/${siteConfig.formspreeId}`, {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { Accept: 'application/json' },
         body: formData
       });
+      const data = await response.json();
 
-      if (!response.ok) throw new Error('Form submission failed.');
+      if (!response.ok || !data.success) throw new Error(data.message || 'Form submission failed.');
 
       form.reset();
       setSubmitState('success');
@@ -89,6 +93,8 @@ export function ContactForm() {
           className="rounded-2xl p-8 md:p-10"
           style={{ background: 'var(--surface)', border: '1px solid var(--border)' }}
         >
+          {/* Honeypot — hidden field to trap bots (Web3Forms) */}
+          <input type="checkbox" name="botcheck" defaultChecked={false} tabIndex={-1} autoComplete="off" style={{ display: 'none' }} />
           <div className="grid gap-4 md:grid-cols-2">
             <label className="block">
               <span className="mb-2 block text-xs uppercase tracking-[0.25em]" style={{ color: 'var(--muted)' }}>

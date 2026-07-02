@@ -11,7 +11,7 @@ export const siteConfig = {
   email: 'artemkravetsofficialph@gmail.com',
   instagram: 'https://www.instagram.com/artemkravetsofficial',
   whatsapp: '+43 690 10174950',
-  formspreeId: 'YOUR_FORMSPREE_FORM_ID',
+  web3formsKey: 'b72dea08-fd35-4f08-9ae7-692d48499bab',
   cloudName: 'dzxyuuimk',
   heroImage: cdn('hero/hero-2')
 };
